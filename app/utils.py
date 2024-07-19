@@ -133,8 +133,8 @@ def classify_steep_with_gpt(summary):
 
 def extract_and_explain_keywords(summary):
     keyword_extraction = gpt_request(
-        prompt=f"Generated Summary: \"{summary}\". Extract one or two key technical or specialized terms from the summary and provide a brief explanation for each.",
-        system_message="You are a helpful assistant that extracts key technical terms from summaries and explains them.",
+        prompt=f"다음은 기사 요약입니다: \"{summary}\". 위 요약에서 한두 개의 핵심 기술 또는 전문 용어를 추출하고, 각 용어에 대한 간략한 설명을 제공해 주세요.",
+        system_message="당신은 요약에서 핵심 기술 용어를 추출하고 설명을 제공하는 유용한 도우미입니다.",
         max_tokens=200
     )
     if 'choices' in keyword_extraction and len(keyword_extraction['choices']) > 0:

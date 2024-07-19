@@ -104,6 +104,10 @@ if st.button("리서치 자료 생성"):
                                     <h4>개요</h4>
                                     <p>{analysis}</p>
                                 </div>
+                                <div class='keywords'>
+                                    <h4>핵심 키워드 설명</h4>
+                                    <p>{keywords}</p>
+                                </div>
                                 <div class='google-scholar'>
                                     <h4>학술 자료</h4>
                                     <p>{google_scholar_content}</p>
@@ -111,10 +115,6 @@ if st.button("리서치 자료 생성"):
                                 <div class='naver-news'>
                                     <h4>관련 자료</h4>
                                     <p>{naver_news_content}</p>
-                                </div>
-                                <div class='keywords'>
-                                    <h4>핵심 키워드 설명</h4>
-                                    <p>{keywords}</p>
                                 </div>
                             </div>
                             """, unsafe_allow_html=True)
